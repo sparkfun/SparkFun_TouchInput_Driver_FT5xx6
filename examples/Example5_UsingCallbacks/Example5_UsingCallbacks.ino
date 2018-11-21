@@ -19,7 +19,7 @@
       INT_PIN   =       INT
 */
 
-#include "SparkFun_FT5xx6.h"
+#include "SparkFun_TouchInput_Driver_FT5xx6.h"    // Click here to get the library: http://librarymanager/All#SparkFun_TouchInput_Driver_FT5xx6
 
 #define SERIAL_PORT Serial
 
@@ -48,7 +48,7 @@ void FT5xx6_InterruptCallback(FT5xx6* me)
 }
 
 // This callback is called whenever a member function returns a status. You can use it to trace program execution
-void  FT5xx6_ReturnCallback(FT5xx6_Status_TypeDef retval, char * file, uint16_t line)
+void  FT5xx6_ReturnCallback(FT5xx6_Status_TypeDef retval, const char * file, uint16_t line)
 {
     SERIAL_PORT.print("Returned ");
     statusDecoder(retval);

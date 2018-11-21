@@ -16,7 +16,7 @@
       3.3V      =       3.3V
 */
 
-#include "SparkFun_FT5xx6.h"
+#include "SparkFun_TouchInput_Driver_FT5xx6.h"    // Click here to get the library: http://librarymanager/All#SparkFun_TouchInput_Driver_FT5xx6
 
 #define SERIAL_PORT Serial      // Using this #define makes it easy to test this code on boards like the SAMD21 that natively use SerialUSB
 
@@ -121,4 +121,3 @@ void statusDecoder( FT5xx6_Status_TypeDef status)
     default :                               SERIAL_PORT.print("Unknown status");      break;
   }
 }
-

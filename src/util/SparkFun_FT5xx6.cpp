@@ -9,7 +9,7 @@ Author: Owen Lyke
 
 */
 
-#include <SparkFun_FT5xx6.h>
+#include "SparkFun_FT5xx6.h"
 
 
 
@@ -168,7 +168,7 @@ FT5xx6_Status_TypeDef		FT5xx6::write( FT5xx6_TouchRecord_TypeDef* precord, uint1
 } 			
 
 // A way to exit functions that return statuses as well as provide a hook for the user
-FT5xx6_Status_TypeDef		FT5xx6::returnStatus(FT5xx6_Status_TypeDef retval, char * file, uint16_t line)
+FT5xx6_Status_TypeDef		FT5xx6::returnStatus(FT5xx6_Status_TypeDef retval, const char * file, uint16_t line)
 {
 	FT5xx6_ReturnCallback(retval, file, line);
 	return retval;
@@ -375,7 +375,7 @@ FT5xx6_Status_TypeDef FT5xx6::interrupt( void )
 
 
 
-void	FT5xx6_ReturnCallback(FT5xx6_Status_TypeDef retval, char * file, uint16_t line){}
+void	FT5xx6_ReturnCallback(FT5xx6_Status_TypeDef retval, const char * file, uint16_t line){}
 void 	FT5xx6_InterruptCallback(FT5xx6* me){}
 
 

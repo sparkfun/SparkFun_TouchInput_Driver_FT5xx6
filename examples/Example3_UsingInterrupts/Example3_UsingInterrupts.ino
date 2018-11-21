@@ -18,7 +18,7 @@
       INT_PIN   =       INT
 */
 
-#include "SparkFun_FT5xx6.h"
+#include "SparkFun_TouchInput_Driver_FT5xx6.h"    // Click here to get the library: http://librarymanager/All#SparkFun_TouchInput_Driver_FT5xx6
 
 #define SERIAL_PORT Serial
 

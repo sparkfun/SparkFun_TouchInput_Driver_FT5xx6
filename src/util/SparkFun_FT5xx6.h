@@ -116,7 +116,7 @@ protected:
 	FT5xx6_Status_TypeDef 		getTouchRecord( FT5xx6_TouchRecord_TypeDef * precord );											// Retrieves touch data from the CTP
 	FT5xx6_Status_TypeDef		write( FT5xx6_TouchRecord_TypeDef* precord, uint16_t numRecords ); 								// Write a touch record (or series of touch records) to the buffer
 
-	FT5xx6_Status_TypeDef		returnStatus(FT5xx6_Status_TypeDef retval, char * file, uint16_t line);							// A way to exit functions that return statuses as well as provide a hook for the user
+	FT5xx6_Status_TypeDef		returnStatus(FT5xx6_Status_TypeDef retval, const char * file, uint16_t line);							// A way to exit functions that return statuses as well as provide a hook for the user
 
 public:
 
@@ -160,7 +160,7 @@ public:
 
 
 // Callbacks available to the user
-void 	FT5xx6_ReturnCallback(FT5xx6_Status_TypeDef retval, char * file, uint16_t line)	__attribute__ ((weak));
+void 	FT5xx6_ReturnCallback(FT5xx6_Status_TypeDef retval, const char * file, uint16_t line)	__attribute__ ((weak));
 void 	FT5xx6_InterruptCallback(FT5xx6* me)											__attribute__ ((weak));
 
 
